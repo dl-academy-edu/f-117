@@ -1,0 +1,26 @@
+.services__list-item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 280px;
+  }
+  
+  .services__item-title {
+    font-size: 30px;
+    font-weight: 700;
+    max-width: 70%;
+  }
+  
+  .services__item-desc {
+    font-size: 16px;
+  }
+  
+  .services__link {
+    width: fit-content;
+    font-weight: 700;
+    font-size: 15px;
+    padding: 11px 42px;
+    text-transform: uppercase;
+    background-color: #008752;
+    color: #FFF;
+  }

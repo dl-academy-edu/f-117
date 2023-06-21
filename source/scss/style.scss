@@ -11,12 +11,18 @@
 */
 @import "_utils";
 @import "_base";
+@import "_fonts";
+
+@import "catalog";
 
 /*
   Import all other blocks
 */
 @import "_blocks/container";
 @import "_blocks/footer";
+@import "_blocks/header";
+@import "_blocks/servises__list-item";
+
 
 /*
   Ниже пример подключения других блоков
@@ -34,27 +40,104 @@
   Не стал выносить в отдельный файл, но если бы блок coming-soon действительно был бы нужен,
   то он должен был бы быть в файле _blocks/coming-soon.scss
 */
+/* Здесь хранятся стили для странички index */
 
-.coming-soon {
-  color: $color-text;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
+body {
+  padding-bottom: 120px;
+}
+
+.banner {
+  background-image: url("../img/banner-background.png");
+  background-repeat: no-repeat;
+  background-position: 60% bottom;
+  background-color: #DAE2E5;
+  padding: 143px 0 286px;
+}
+
+.banner__title {
+  font-size: 90px;
+  line-height: 100%;
+  max-width: 900px;
+  margin-bottom: 49px;
+}
+
+.banner__btn {
+  font-family: 'Lato', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #FFF;
+  text-transform: uppercase;
+  padding: 16px 55px;
+  background-color: #95459A;
+  border: none;
+  cursor: pointer;
+}
+
+/* services block */
+.services {
+  font-family: 'Lato', sans-serif;
+}
+
+.services__title {
+  font-weight: 700;
+  font-size: 42px;
+  text-transform: uppercase;
   text-align: center;
-  min-height: calc(100vh - 100px);
-  margin: auto;
-  padding: 0 5vw;
+  margin: 80px 0 50px 0;
+}
 
-  &__title {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-between;
-    font-size: 25vw;
-    font-weight: 400;
-    margin: 0 auto;
-    text-transform: uppercase;
-    width: 100%;
-  }
+.services__list {
+  padding: 0;
+  display: flex;
+  gap: 20px;
+  color: #2C3036;
+}
+
+
+.about {
+  position: relative;
+  margin-top: 110px;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 36px;
+}
+
+.about::after {
+  position: absolute;
+  content: '';
+  width: 570px;
+  height: 499px;
+  background-color: #008752;
+  bottom: 0;
+  right: -110px;
+}
+
+.about__wrapper {
+  max-width: 40%;
+}
+
+.about__title {
+  font-size: 72px;
+  line-height: 100%;
+}
+
+.about__desc {
+  font-family: 'Lato', sans-serif;
+  line-height: 28.08px;
+  font-size: 18px;
+  margin: 36px 0 34px 0;
+}
+
+.about__link {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  padding: 11px 42px;
+  color: #FFF;
+  text-transform: uppercase;
+  background-color: #008752;
+}
+
+.about__img {
+  margin-top: -7px;
+  z-index: 1;
 }
