@@ -1,5 +1,8 @@
 .servises__list {
-      &-item {
+    display: flex;
+    gap: 20px;
+    color: #2C3036;
+    &-item {
         display: flex;
         flex-direction: column;
         gap: 20px;

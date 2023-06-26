@@ -12,7 +12,6 @@
 @import "_utils";
 @import "_base";
 @import "_fonts";
-
 @import "catalog";
 
 /*
@@ -21,26 +20,8 @@
 @import "_blocks/container";
 @import "_blocks/footer";
 @import "_blocks/header";
+@import "_blocks/servises__list";
 @import "_blocks/servises__list-item";
-
-
-/*
-  Ниже пример подключения других блоков
-
-  Каждый новый файл должен отвечать за конкретный блок в терминах БЭМ
-  (https://ru.bem.info/methodology/key-concepts/#%D0%B1%D0%BB%D0%BE%D0%BA)
-
-  Для именования селекторов давайте придерживаться стиля two dashes
-  (https://ru.bem.info/methodology/naming-convention/#%D1%81%D1%82%D0%B8%D0%BB%D1%8C-two-dashes)
-  block-name__element-name--modificator
-*/
-
-/*
-  Код ниже нужно удалить, он добавлен просто для примера
-  Не стал выносить в отдельный файл, но если бы блок coming-soon действительно был бы нужен,
-  то он должен был бы быть в файле _blocks/coming-soon.scss
-*/
-/* Здесь хранятся стили для странички index */
 
 body {
   padding-bottom: 120px;
@@ -52,47 +33,33 @@ body {
   background-position: 60% bottom;
   background-color: #DAE2E5;
   padding: 143px 0 286px;
-}
-
-.banner__title {
-  font-size: 90px;
-  line-height: 100%;
-  max-width: 900px;
-  margin-bottom: 49px;
-}
-
-.banner__btn {
-  font-family: 'Lato', sans-serif;
-  font-size: 24px;
-  font-weight: 700;
-  color: #FFF;
-  text-transform: uppercase;
-  padding: 16px 55px;
-  background-color: #95459A;
-  border: none;
-  cursor: pointer;
+  &__title {
+    @include title;
+    font-size: $font-size-banner;
+    font-weight: 900;
+    max-width: 800px;
+  }
+  &__btn {
+    font-family: 'Lato', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #FFF;
+    text-transform: uppercase;
+    padding: 16px 55px;
+    background-color: #95459A;
+    border: none;
+    cursor: pointer;
+  }
 }
 
 /* services block */
 .services {
-  font-family: 'Lato', sans-serif;
+  margin-top: 80px;
+  &__title {
+    @include title;
+    text-align: center;
+  }
 }
-
-.services__title {
-  font-weight: 700;
-  font-size: 42px;
-  text-transform: uppercase;
-  text-align: center;
-  margin: 80px 0 50px 0;
-}
-
-.services__list {
-  padding: 0;
-  display: flex;
-  gap: 20px;
-  color: #2C3036;
-}
-
 
 .about {
   position: relative;
@@ -100,44 +67,40 @@ body {
   display: flex;
   justify-content: space-between;
   padding-bottom: 36px;
-}
-
-.about::after {
-  position: absolute;
-  content: '';
-  width: 570px;
-  height: 499px;
-  background-color: #008752;
-  bottom: 0;
-  right: -110px;
-}
-
-.about__wrapper {
-  max-width: 40%;
-}
-
-.about__title {
-  font-size: 72px;
-  line-height: 100%;
-}
-
-.about__desc {
-  font-family: 'Lato', sans-serif;
-  line-height: 28.08px;
-  font-size: 18px;
-  margin: 36px 0 34px 0;
-}
-
-.about__link {
-  font-family: 'Lato', sans-serif;
-  font-weight: 700;
-  padding: 11px 42px;
-  color: #FFF;
-  text-transform: uppercase;
-  background-color: #008752;
-}
-
-.about__img {
-  margin-top: -7px;
-  z-index: 1;
+  &::after {
+    position: absolute;
+    content: '';
+    width: 570px;
+    height: 499px;
+    background-color: #008752;
+    bottom: 0;
+    right: -110px;
+  }
+  &__wrapper {
+    max-width: 40%;
+  }
+  &__title {
+    @include title;
+    font-size: 72px;
+    text-transform: capitalize;
+    font-weight: 900;
+  }
+  &__desc {
+    font-family: 'Lato', sans-serif;
+    line-height: 28.08px;
+    font-size: 18px;
+    margin: 36px 0 34px 0;
+  }
+  &__link {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    padding: 11px 42px;
+    color: #FFF;
+    text-transform: uppercase;
+    background-color: #008752;
+  }
+  &__img {
+    margin-top: -7px;
+    z-index: 1;
+  }
 }
