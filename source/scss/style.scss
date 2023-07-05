@@ -28,91 +28,121 @@ body {
   position: relative;
 }
 
-@keyframes chat {
-  100% {
-    height: 100%;
+.svg {
+  cursor: pointer;
+  .eyebrown {
+    transition: .5s;
+    transform: translateY(-10px);
+    animation: br .5s linear infinite;
+  }
+  // &:hover {
+  //   .eyebrown {
+
+
+  //   }
+  // }
+  &:active {
+    .eyebrown-2 {
+      transform: translateY(10px);
+    }
   }
 }
 
-.chat {
-  position: absolute;
-  top: 200px;
-  left: 500px;
-  width: 300px;
-  height: 488px;
-  overflow: hidden;
-  background: #FFF;
-  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.35);
-  &__header {
-    position: relative;
-    background: #F6F6F8;
-    border-bottom: 1px solid #BCBCBE;
+@keyframes br {
+  0% {
+    transform: translateY(0px);
   }
-  &__title {
-    color: #27253F;
-    font-size: 18px;
-    font-family: Lato;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    padding-top: 14px;
-    padding-left: 15px;
+  100% {
+    transform: translateY(-10px);
   }
-  &__desc {
-    color: #6B6A6A;
-    font-size: 12px;
-    font-family: Lato;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    padding-left: 15px;
-    padding-bottom: 14px;
-  }
-  &__close {
-    position: absolute;
-    top: 24px;
-    right: 15px;
-  }
-  &__body {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    height: 100%;
-  }
-  &__message {
-    color: #FFF;
-    font-size: 14px;
-    font-family: Lato;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    padding: 8px 10px;
-    &-container {
-      height: 0;
-      animation: chat 2s forwards;
+}
+
+
+// @keyframes chat {
+//   100% {
+//     height: 100%;
+//   }
+// }
+
+// .chat {
+//   position: absolute;
+//   top: 200px;
+//   left: 500px;
+//   width: 300px;
+//   height: 488px;
+//   overflow: hidden;
+//   background: #FFF;
+//   box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.35);
+//   &__header {
+//     position: relative;
+//     background: #F6F6F8;
+//     border-bottom: 1px solid #BCBCBE;
+//   }
+//   &__title {
+//     color: #27253F;
+//     font-size: 18px;
+//     font-family: Lato;
+//     font-style: normal;
+//     font-weight: 700;
+//     line-height: normal;
+//     padding-top: 14px;
+//     padding-left: 15px;
+//   }
+//   &__desc {
+//     color: #6B6A6A;
+//     font-size: 12px;
+//     font-family: Lato;
+//     font-style: normal;
+//     font-weight: 400;
+//     line-height: normal;
+//     padding-left: 15px;
+//     padding-bottom: 14px;
+//   }
+//   &__close {
+//     position: absolute;
+//     top: 24px;
+//     right: 15px;
+//   }
+//   &__body {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: flex-end;
+//     height: 100%;
+//   }
+//   &__message {
+//     color: #FFF;
+//     font-size: 14px;
+//     font-family: Lato;
+//     font-style: normal;
+//     font-weight: 400;
+//     line-height: normal;
+//     padding: 8px 10px;
+//     &-container {
+//       height: 0;
+//       animation: chat 2s forwards;
       
 
-      @for $i from 1 through 5 {
-        &:nth-child(#{$i}) {
-          animation-delay: $i + s;
-        }
-      }
-    }
-    &-right {
-      width: 70%;
-      border-radius: 10px;
-      background: #2198F4;
-      margin: 0  15px 15px auto;
-    }
-    &-left {
-      width: 70%;
-      color: #27253F;
-      border-radius: 10px;
-      background: #E4E3E8;
-      margin: 0 auto 15px 15px ;
-    }
-  }
-}
+//       @for $i from 1 through 5 {
+//         &:nth-child(#{$i}) {
+//           animation-delay: $i + s;
+//         }
+//       }
+//     }
+//     &-right {
+//       width: 70%;
+//       border-radius: 10px;
+//       background: #2198F4;
+//       margin: 0  15px 15px auto;
+//     }
+//     &-left {
+//       width: 70%;
+//       color: #27253F;
+//       border-radius: 10px;
+//       background: #E4E3E8;
+//       margin: 0 auto 15px 15px ;
+//     }
+//   }
+// }
 
 .banner {
   background-image: url("../img/banner-background.png");
