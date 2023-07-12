@@ -150,11 +150,23 @@ body {
   background-position: 60% bottom;
   background-color: #DAE2E5;
   padding: 143px 0 286px;
+  @media (max-width: 768px) {
+    padding: 58px 0 286px;
+  }
+  @media (max-width: 400px) {
+    padding: 58px 0 376px;
+  }
   &__title {
     @include title;
     font-size: $font-size-banner;
     font-weight: 900;
     max-width: 800px;
+    @media (max-width: 768px) {
+      font-size: 60px;
+    }
+    @media (max-width: 400px) {
+      font-size: 36px;
+    }
   }
   &__btn {
     font-family: 'Lato', sans-serif;
@@ -166,12 +178,24 @@ body {
     background-color: #95459A;
     border: none;
     cursor: pointer;
+    @media (max-width: 768px) {
+      padding: 16px 32px;
+    }
+    @media (max-width: 400px) {
+      padding: 16px 20px;
+    }
   }
 }
 
 /* services block */
 .services {
   margin-top: 80px;
+  @media (max-width: 768px) {
+    margin-top: 70px;
+  }
+  @media (max-width: 400px) {
+    margin-top: 40px;
+  }
   &__title {
     @include title;
     text-align: center;
@@ -184,15 +208,15 @@ body {
   display: flex;
   justify-content: space-between;
   padding-bottom: 36px;
-  &::after {
-    position: absolute;
-    content: '';
-    width: 570px;
-    height: 499px;
-    background-color: #008752;
-    bottom: 0;
-    right: -110px;
-  }
+  // &::after {
+  //   position: absolute;
+  //   content: '';
+  //   width: 570px;
+  //   height: 499px;
+  //   background-color: #008752;
+  //   bottom: 0;
+  //   right: -110px;
+  // }
   &__wrapper {
     max-width: 40%;
   }
@@ -201,12 +225,18 @@ body {
     font-size: 72px;
     text-transform: capitalize;
     font-weight: 900;
+    @media (max-width:1400px) {
+      font-size: 48px;
+    }
   }
   &__desc {
     font-family: 'Lato', sans-serif;
     line-height: 28.08px;
     font-size: 18px;
     margin: 36px 0 34px 0;
+    @media (max-width:1400px) {
+      font-size: 14px;
+    }
   }
   &__link {
     font-family: 'Lato', sans-serif;

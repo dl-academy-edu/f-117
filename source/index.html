@@ -24,7 +24,7 @@
   </head>
   <body>
 
-    <svg class="svg" width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- <svg class="svg" width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g filter="url(#filter0_d_1_1632)">
       <path d="M90 24.1178V73.8822C90 76.1564 88.1474 78 85.8621 78H41L22.3448 89.7556C21.8788 90.0574 21.2841 90.0814 20.7951 89.818C20.3061 89.5547 20.001 89.0462 20 88.4928V78H14.1379C11.8526 78 10 76 10 73.8822V24.1178C10 21.8436 11.8526 20 14.1379 20C16.4232 20 85.8621 20 85.8621 20C88.1474 20 90 21.8436 90 24.1178Z" fill="#2198F4"/>
       <path d="M50 68C66.0163 68 79 55.0163 79 39C79 22.9837 66.0163 10 50 10C33.9837 10 21 22.9837 21 39C21 55.0163 33.9837 68 50 68Z" fill="#F0C419"/>
@@ -51,7 +51,7 @@
       <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_1632" result="shape"/>
       </filter>
       </defs>
-      </svg>
+      </svg> -->
     <!-- <div class="chat">
       <div class="chat__header">
         <h2 class="chat__title">ChemDry Chat</h2>
@@ -143,17 +143,25 @@
           </p>
           <a class="about__link" href="#">Learn More</a>
         </div>
-        <img
+        <picture>
+          <source srcset="./img/mobile.jpg, ./img/mobile-2x.jpg 2x"
+          media="(max-width: 375px)"
+          >
+          <source srcset="./img/table.jpg, ./img/table-2x.jpg 2x"
+            media="(max-width: 768px)"
+          >
+          <img
           class="about__img"
           src="./img/about.jpg"
           alt="Our team clean up some home"
-          width="580"
-          height="430"
         />
+        </picture>
+
       </section>
     </main>
     @@include('blocks/popup.html')
     <script src="js/popup.js"></script>
+    <script src="js/burger.js"></script>
     <script src="js/app.js" defer></script>
   </body>
 </html>

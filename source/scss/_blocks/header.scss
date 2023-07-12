@@ -18,6 +18,9 @@
       &-list {
         display: flex; 
         column-gap: 15px;
+        @media (max-width: 800px) {
+          display: none;
+        }
       }
       &-link {
         font-family: $lato;
@@ -55,9 +58,49 @@
           &:hover {
             transform: translate(-50px, 50px);
           }
+          @media (max-width: 530px) {
+            display: none;
+          }
+        }
+      }
+      &--desc {
+        display: none;
+      }
+      &--m {
+        display: none;
+        @media (max-width:800px) {
+          display: block;
+          position: relative;
+          padding: 10px;
+          border: none;
+          &::before {
+            content: '';
+            position: absolute;
+            background-image: url('../img/burger.svg');
+            background-repeat: no-repeat;
+            width: 30px;
+            height: 30px;
+          }
         }
       }
     }
+    &__mobile {
+      display: none;
+      @media (max-width: 800px) {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #EEEEEE;
+        padding-right: 280px;
+        padding-bottom: 780px;
+        transform: translateX(-1000px);
+        transition: .4s;
+      }
+    }
+  }
+  .open {
+    transform: translateX(0);
   }
 
   @keyframes logo {
